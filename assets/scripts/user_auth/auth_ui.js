@@ -9,24 +9,19 @@ const store = require('../store.js')
 
 const signInSuccess = function (response) {
   console.log('sign-in success')
+  $('#sign-out').show()
   store.user = response.user
   console.log(store.user)
 }
-// const signInFail = function () {
-//   $('#winbox').html('You lie! <br> Please check your credentials and try again')
-//   $('#sign-in input').val('')
-// }
-// const signOutSuccess = function () {
-//   $('#board, #sign-out, #past-games-modal-button, #fail, #new-game, #change-password-modal-button').hide()
-//   $('#winbox').html('')
-//   $('#games-holder').html('')
-//   $('#sign-in-modal-button, #sign-up-modal-button').show()
-//   $('input').val('')
-// }
-// const signOutFailure = function () {
-//   $('#winbox').html('You will never leave me! <br> Sign out failed, please try again.')
-//   $('#sign-out input').val('')
-// }
+const signInFail = function () {
+  console.log('You lie! <br> Please check your credentials and try again')
+}
+const signOutSuccess = function () {
+  console.log('signed out!')
+}
+const signOutFailure = function () {
+  console.log('You will never leave me! <br> Sign out failed, please try again.')
+}
 // const changePWSuccess = function () {
 //   $('#change-password input').val('')
 //   $('#winbox').html('your password has changed')
@@ -68,10 +63,10 @@ const signInSuccess = function (response) {
 module.exports = {
   // signUpSuccess,
   // fail,
-  signInSuccess
-  // signInFail,
-  // signOutSuccess,
-  // signOutFailure,
+  signInSuccess,
+  signInFail,
+  signOutSuccess,
+  signOutFailure
   // changePWSuccess,
   // newGameStart,
   // nextMove,

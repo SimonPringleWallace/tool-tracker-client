@@ -25,13 +25,13 @@ const signIn = function () {
   return false
 }
 //
-// const signOut = function () {
-//   event.preventDefault()
-//
-//   api.signOut()
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
+const signOut = function () {
+  event.preventDefault()
+
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
 //
 // const changePW = function () {
 //   event.preventDefault()
@@ -56,20 +56,20 @@ const signIn = function () {
 //   $('#games-holder').html('')
 // }
 //
-// const clearOnClose = function () {
-//   $('input').val('')
-// }
+const clearOnClose = function () {
+  $('input').val('')
+}
 //
 const handlers = function () {
   // $('#sign-in-modal-button').on('click', signIn)
   // $('#sign-up').on('submit', signUp)
   // $('#sign-up-modal-button').on('click', hideRudeness)
   $('#sign-in').on('submit', signIn)
-  // $('#sign-out').on('click', signOut)
+  $('#sign-out').on('click', signOut)
   // $('#change-password').on('submit', changePW)
   // $('#change-password-modal-button').on('click', hideRudeness)
   // $('#previous-conquests').on('hidden.bs.modal', wipeGames)
-  // $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)
+  $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)
 }
 
 module.exports = {
