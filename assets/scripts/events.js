@@ -32,18 +32,17 @@ const signOut = function () {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-//
-// const changePW = function () {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//
-//   api.changePW(data)
-//     .then(ui.changePWSuccess)
-//     .catch(ui.fail)
-//   $('#change-password-modal').modal('hide')
-//   $('#change-password input').val('')
-//   return false
-// }
+
+const changePW = function () {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+
+  api.changePW(data)
+    .then(ui.changePWSuccess)
+    .catch(ui.fail)
+  $('#change-password-modal').modal('hide')
+  return false
+}
 //
 // const hideRudeness = function () {
 //   event.preventDefault()
@@ -66,7 +65,7 @@ const handlers = function () {
   // $('#sign-up-modal-button').on('click', hideRudeness)
   $('#sign-in').on('submit', signIn)
   $('#sign-out').on('click', signOut)
-  // $('#change-password').on('submit', changePW)
+  $('#change-password').on('submit', changePW)
   // $('#change-password-modal-button').on('click', hideRudeness)
   // $('#previous-conquests').on('hidden.bs.modal', wipeGames)
   $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)

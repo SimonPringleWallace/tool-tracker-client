@@ -2,7 +2,7 @@
 const store = require('../store.js')
 
 const fail = function () {
-console.log('fail!')
+  console.log('fail!')
 }
 const signUpSuccess = function () {
   $('#sign-up-modal-button').hide()
@@ -24,10 +24,12 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   console.log('You will never leave me! <br> Sign out failed, please try again.')
 }
-// const changePWSuccess = function () {
-//   $('#change-password input').val('')
-//   $('#winbox').html('your password has changed')
-// }
+
+const changePWSuccess = function () {
+  $('#change-password input').val('')
+  console.log('your password has changed')
+}
+
 // const newGameStart = function (response) {
 //   $('#winbox').html("get playin'!")
 //   store.game = response.game
@@ -68,8 +70,8 @@ module.exports = {
   signInSuccess,
   signInFail,
   signOutSuccess,
-  signOutFailure
-  // changePWSuccess,
+  signOutFailure,
+  changePWSuccess
   // newGameStart,
   // nextMove,
   // pastGames
