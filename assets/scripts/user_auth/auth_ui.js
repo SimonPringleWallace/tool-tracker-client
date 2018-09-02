@@ -1,11 +1,13 @@
 'use strict'
 const store = require('../store.js')
 
-// const fail = function () {
-//   $('#winbox').html('')
-//   $('#fail').show()
-//   $('#sign-up input').val('')
-// }
+const fail = function () {
+console.log('fail!')
+}
+const signUpSuccess = function () {
+  $('#sign-up-modal-button').hide()
+  console.log('Welcome! <br> What are you waiting for? <br> Sign in!')
+}
 
 const signInSuccess = function (response) {
   console.log('sign-in success')
@@ -61,8 +63,8 @@ const signOutFailure = function () {
 // }
 
 module.exports = {
-  // signUpSuccess,
-  // fail,
+  signUpSuccess,
+  fail,
   signInSuccess,
   signInFail,
   signOutSuccess,

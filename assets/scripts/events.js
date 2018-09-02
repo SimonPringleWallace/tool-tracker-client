@@ -3,17 +3,17 @@ const api = require('./user_auth/auth_apis.js')
 const ui = require('./user_auth/auth_ui.js')
 // const store = require('./../store.js')
 
-// const signUp = function () {
-//   const data = getFormFields(event.target)
-//
-//   api.signUp(data)
-//     .then(ui.signUpSuccess)
-//     .catch(ui.fail)
-//   event.preventDefault()
-//   $('#sign-up-modal').modal('hide')
-//   return false
-// }
-//
+const signUp = function () {
+  const data = getFormFields(event.target)
+
+  api.signUp(data)
+    .then(ui.signUpSuccess)
+    .catch(ui.fail)
+  event.preventDefault()
+  $('#sign-up-modal').modal('hide')
+  return false
+}
+
 const signIn = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -24,7 +24,7 @@ const signIn = function () {
   $('#sign-in-modal').modal('hide')
   return false
 }
-//
+
 const signOut = function () {
   event.preventDefault()
 
@@ -62,7 +62,7 @@ const clearOnClose = function () {
 //
 const handlers = function () {
   // $('#sign-in-modal-button').on('click', signIn)
-  // $('#sign-up').on('submit', signUp)
+  $('#sign-up').on('submit', signUp)
   // $('#sign-up-modal-button').on('click', hideRudeness)
   $('#sign-in').on('submit', signIn)
   $('#sign-out').on('click', signOut)
