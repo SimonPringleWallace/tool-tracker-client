@@ -1,26 +1,29 @@
 'use strict'
 const store = require('../store.js')
+const userIn = require('./signed-in-view.js')
+const userOut = require('./signed-out-view.js')
 
-const fail = function () {
-  console.log('fail!')
-}
 const signUpSuccess = function () {
   $('#sign-up-modal-button').hide()
   console.log('Welcome! <br> What are you waiting for? <br> Sign in!')
 }
 
 const signInSuccess = function (response) {
-  console.log('sign-in success')
-  $('#sign-out').show()
+  userIn.signInView()
   store.user = response.user
-  console.log(store.user)
 }
 const signInFail = function () {
   console.log('You lie! <br> Please check your credentials and try again')
 }
-const signOutSuccess = function () {
-  console.log('signed out!')
+
+const fail = function () {
+  console.log('fail!')
 }
+
+const signOutSuccess = function () {
+  userOut.signOutView()
+}
+
 const signOutFailure = function () {
   console.log('You will never leave me! <br> Sign out failed, please try again.')
 }

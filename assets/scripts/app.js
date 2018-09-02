@@ -8,7 +8,7 @@
 
 const auth = require('./events.js')
 
-$('#new-game, #past-games-modal-button, #fail, #board').hide()
+$('#new-game, #sign-out, #change-password-modal-button, #past-games-modal-button, #fail, #board').hide()
 $(() => {
   auth.handlers()
 })
