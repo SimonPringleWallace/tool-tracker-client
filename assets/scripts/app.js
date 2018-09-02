@@ -6,9 +6,11 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-const auth = require('./events.js')
+const userAuth = require('./user-events.js')
+const toolCrud = require('./tool-events.js')
 
 $('#new-game, #sign-out, #change-password-modal-button, #past-games-modal-button, #fail, #board').hide()
 $(() => {
-  auth.handlers()
+  userAuth.handlers()
+  toolCrud.handlers()
 })
