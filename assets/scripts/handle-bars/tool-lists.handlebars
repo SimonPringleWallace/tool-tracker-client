@@ -1,0 +1,16 @@
+{{#each tools as |tool|}}
+
+<section data-id="{{tool.id}}">
+  <h3 data-id="{{tool.id}}">Name:{{tool.name}}</h3>
+    <small>
+     Quantity: {{tool.quantity}}
+
+     Available: {{tool.available}}
+     </small>
+     <button class='edit-tool'>Edit</button>
+     <button id='delete-tool'>Delete</button>
+
+  </section>
+
+{{/each}}
+<!-- edit and then the div/modal/whatever that pops up has the default values of the previous values of the tool -->
