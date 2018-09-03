@@ -15,10 +15,18 @@ const seeTools = function () {
 const seeOneTool = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(`data is ${data.id}`)
-
   api.seeOneTool(data)
     .then(ui.displayOneTool)
+    .catch(ui.fail)
+  return false
+}
+
+const addTool = function () {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.addTool(data)
+    .then(ui.addToolSuccess)
     .catch(ui.fail)
   return false
 }
@@ -61,7 +69,7 @@ const handlers = function () {
   $('#get-tools').on('click', seeTools)
   $('#see-one-tool').on('submit', seeOneTool)
 //   // $('#sign-up-modal-button').on('click', hideRudeness)
-//   $('#sign-in').on('submit', signIn)
+  $('#add-a-tool').on('submit', addTool)
 //   $('#sign-out').on('click', signOut)
 //   $('#change-password').on('submit', changePW)
 //   // $('#change-password-modal-button').on('click', hideRudeness)

@@ -1,6 +1,6 @@
 const displayTools = function (serverResponse) {
   console.log('Weeee got the tools!')
-  console.log(serverResponse.tool)
+  console.log(serverResponse.tools)
 }
 
 const displayOneTool = function (serverResponse) {
@@ -8,14 +8,13 @@ const displayOneTool = function (serverResponse) {
   console.log(serverResponse.tool)
 }
 
-// const signInSuccess = function (serverResponse) {
-//   userSignIn.signInProcesses(serverResponse)
-//   console.log(store.user)
-// }
+const addToolSuccess = function (serverResponse) {
+  console.log(serverResponse.tool)
+}
 // const signInFail = function () {
 //   console.log('You lie! <br> Please check your credentials and try again')
 // }
-//
+
 const fail = function () {
   console.log('fail!')
 }
@@ -35,7 +34,8 @@ const fail = function () {
 module.exports = {
   displayTools,
   fail,
-  displayOneTool
+  displayOneTool,
+  addToolSuccess
 //   signInSuccess,
 //   signInFail,
 //   signOutSuccess,

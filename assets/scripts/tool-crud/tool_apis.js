@@ -22,13 +22,17 @@ const seeOneTool = function (data) {
   })
 }
 
-// const signIn = function (data) {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-in',
-//     method: 'POST',
-//     data
-//   })
-// }
+const addTool = function (data) {
+  console.log(`this data is going to ajax call ${data}`)
+  return $.ajax({
+    url: config.apiUrl + '/tools',
+    method: 'POST',
+    data,
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    }
+  })
+}
 //
 // const signOut = function () {
 //   return $.ajax({
@@ -44,8 +48,8 @@ const seeOneTool = function (data) {
 //
 module.exports = {
   seeTools,
-  seeOneTool
-//   signIn,
+  seeOneTool,
+  addTool
 //   signOut,
 //   changePW
 }
