@@ -40,12 +40,21 @@ const editTool = function () {
   document.getElementById('edit-a-tool').reset()
   return false
 }
+const deleteTool = function () {
+  event.preventDefault()
+  const toolId = $(event.target).parent().data('id')
+  console.log('clicked ' + toolId)
+  api.deleteTool(toolId)
+    .then(ui.deleteToolSuccess)
+    .catch(ui.fail)
+}
 
 const handlers = function () {
   $('#get-tools').on('click', seeTools)
   $('#see-one-tool').on('submit', seeOneTool)
   $('#add-a-tool').on('submit', addTool)
   $('#edit-a-tool').on('submit', editTool)
+  $('#tool-list').on('click', '#delete-tool', deleteTool)
 }
 
 module.exports = {

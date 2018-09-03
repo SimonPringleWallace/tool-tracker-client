@@ -1,11 +1,13 @@
-const displayTools = function (serverResponse) {
-  console.log('Weeee got the tools!')
-  console.log(serverResponse.tools)
+const indexToolsHBars = require('../handle-bars/tool-lists.handlebars')
+const showToolHBars = require('../handle-bars/single-tool.handlebars')
+const displayTools = (serverResponse) => {
+  const showToolsHtml = indexToolsHBars({ tools: serverResponse.tools })
+  $('#tool-list').html(showToolsHtml)
 }
 
 const displayOneTool = function (serverResponse) {
-  console.log('Oonnnly one tool')
-  console.log(serverResponse.tool)
+  const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
+  $('#tool-list').html(showToolsHtml)
 }
 
 const addToolSuccess = function (serverResponse) {
@@ -14,6 +16,11 @@ const addToolSuccess = function (serverResponse) {
 const editToolSuccess = function (serverResponse) {
 // const stringResponse = JSON.stringify(serverResponse)
   console.log(serverResponse.tool)
+}
+
+const deleteToolSuccess = function () {
+// const stringResponse = JSON.stringify(serverResponse)
+  console.log('tool deleted')
 }
 
 const fail = function () {
@@ -37,7 +44,8 @@ module.exports = {
   fail,
   displayOneTool,
   addToolSuccess,
-  editToolSuccess
+  editToolSuccess,
+  deleteToolSuccess
 //   signInFail,
 //   signOutSuccess,
 //   signOutFailure,

@@ -42,6 +42,17 @@ const editTool = function (data) {
     }
   })
 }
+
+const deleteTool = function (toolId) {
+  return $.ajax({
+    url: config.apiUrl + '/tools/' + toolId,
+    method: 'DELETE',
+    toolId,
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    }
+  })
+}
 //
 //
 //
@@ -49,7 +60,8 @@ module.exports = {
   seeTools,
   seeOneTool,
   addTool,
-  editTool
+  editTool,
+  deleteTool
 //   signOut,
 //   changePW
 }
