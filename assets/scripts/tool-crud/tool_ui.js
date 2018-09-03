@@ -11,9 +11,10 @@ const displayOneTool = function (serverResponse) {
 const addToolSuccess = function (serverResponse) {
   console.log(serverResponse.tool)
 }
-// const signInFail = function () {
-//   console.log('You lie! <br> Please check your credentials and try again')
-// }
+const editToolSuccess = function (serverResponse) {
+// const stringResponse = JSON.stringify(serverResponse)
+  console.log(serverResponse.tool)
+}
 
 const fail = function () {
   console.log('fail!')
@@ -35,8 +36,8 @@ module.exports = {
   displayTools,
   fail,
   displayOneTool,
-  addToolSuccess
-//   signInSuccess,
+  addToolSuccess,
+  editToolSuccess
 //   signInFail,
 //   signOutSuccess,
 //   signOutFailure,

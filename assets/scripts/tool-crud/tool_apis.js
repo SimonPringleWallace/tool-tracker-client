@@ -11,7 +11,6 @@ const seeTools = function () {
   })
 }
 const seeOneTool = function (data) {
-  console.log(`this data is going to ajax call ${data.id}`)
   return $.ajax({
     url: config.apiUrl + '/tools/' + data.id,
     method: 'GET',
@@ -23,7 +22,6 @@ const seeOneTool = function (data) {
 }
 
 const addTool = function (data) {
-  console.log(`this data is going to ajax call ${data}`)
   return $.ajax({
     url: config.apiUrl + '/tools',
     method: 'POST',
@@ -33,23 +31,25 @@ const addTool = function (data) {
     }
   })
 }
-//
-// const signOut = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/sign-out',
-//     method: 'DELETE',
-//     headers: {
-//       'Authorization': 'Token token=' + store.user.token
-//     }
-//   })
-// }
+
+const editTool = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/tools/' + data.id,
+    method: 'PATCH',
+    data,
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    }
+  })
+}
 //
 //
 //
 module.exports = {
   seeTools,
   seeOneTool,
-  addTool
+  addTool,
+  editTool
 //   signOut,
 //   changePW
 }
