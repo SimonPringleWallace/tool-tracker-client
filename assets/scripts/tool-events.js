@@ -1,4 +1,4 @@
-// const getFormFields = require('../../lib/get-form-fields.js')
+const getFormFields = require('../../lib/get-form-fields.js')
 const api = require('./tool-crud/tool_apis.js')
 const ui = require('./tool-crud/tool_ui.js')
 // const store = require('./../store.js')
@@ -12,16 +12,16 @@ const seeTools = function () {
   return false
 }
 
-// const signIn = function () {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//
-//   api.signIn(data)
-//     .then(ui.signInSuccess)
-//     .catch(ui.signInFail)
-//   $('#sign-in-modal').modal('hide')
-//   return false
-// }
+const seeOneTool = function () {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(`data is ${data.id}`)
+
+  api.seeOneTool(data)
+    .then(ui.displayOneTool)
+    .catch(ui.fail)
+  return false
+}
 //
 // const signOut = function () {
 //   event.preventDefault()
@@ -59,7 +59,7 @@ const seeTools = function () {
 // //
 const handlers = function () {
   $('#get-tools').on('click', seeTools)
-//   $('#sign-up').on('submit', signUp)
+  $('#see-one-tool').on('submit', seeOneTool)
 //   // $('#sign-up-modal-button').on('click', hideRudeness)
 //   $('#sign-in').on('submit', signIn)
 //   $('#sign-out').on('click', signOut)

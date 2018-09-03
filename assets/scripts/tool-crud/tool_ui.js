@@ -1,5 +1,11 @@
-const displayTools = function () {
+const displayTools = function (serverResponse) {
   console.log('Weeee got the tools!')
+  console.log(serverResponse.tool)
+}
+
+const displayOneTool = function (serverResponse) {
+  console.log('Oonnnly one tool')
+  console.log(serverResponse.tool)
 }
 
 // const signInSuccess = function (serverResponse) {
@@ -28,7 +34,8 @@ const fail = function () {
 //
 module.exports = {
   displayTools,
-  fail
+  fail,
+  displayOneTool
 //   signInSuccess,
 //   signInFail,
 //   signOutSuccess,
