@@ -11,7 +11,8 @@ h1 {
   margin-top: 100px;
   font-size: 80px;
   color: white;
-  font-family: 'Inknut Antiqua';
+  font-flamily: 'Inknut Antiqua';
+  text-shadow: -4px 2px grey;
 }
 .hammer-fit {
   position:relative;
@@ -37,9 +38,37 @@ transform: rotate(-315deg);
   top: -100px;
   transition: transform .70s ease-out;
   transform-origin: center;
+  margin-left: 10px;
+  width: auto;
+  height:auto;
+  display: inline-flex;
+}
+#sign-up-modal-button {
+  margin-left: 10px;
 }
 
 .buttonsweep {
   transition-delay: 2.02s;
-  transform: translateX(-415px);
+  transform: translateX(-400px);
 }
+
+.clutter {
+  font-flamily: 'Inknut Antiqua';
+  color: white;
+  margin-left:215px;
+  margin-top:-20px;
+  font-size: 25px;
+  text-shadow: -2px 1px grey;
+  animation: fadein 5.25s;
+}
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  80% {opacity: 0;}
+  100% {opacity: 1}
+}
+// .clutterFadeIn {
+// transition-delay: 5s;
+// transition: opacity 5s ease-in;
+// opacity: 1;
+// }

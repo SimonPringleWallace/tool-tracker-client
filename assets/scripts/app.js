@@ -13,6 +13,4 @@ $('#new-game, #sign-out, #change-password-modal-button, #get-tools, #see-one-too
 $(() => {
   userAuth.handlers()
   toolCrud.handlers()
-  $('.hammer-fit').toggleClass('hammerstrike')
-  $('.signup-in').toggleClass('buttonsweep')
 })
