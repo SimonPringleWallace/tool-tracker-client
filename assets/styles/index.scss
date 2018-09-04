@@ -1,5 +1,29 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: green;
+  background-image: url('../../../images/blueprintv3.png');
+  background-size: cover;
+  background-position: absolute;
+}
+h1 {
+  outline-color: black;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 80px;
+  color: white;
+  font-family: 'Inknut Antiqua';
+}
+.hammer-fit {
+  color:white;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  transition: transform .5s linear;
+  transform-origin: center;
+}
+
+.hammerstrike {
+transition-delay: 1s;
+transform: rotate(-45deg);
 }

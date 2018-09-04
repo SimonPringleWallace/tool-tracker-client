@@ -53,15 +53,11 @@ const deleteTool = function (toolId) {
     }
   })
 }
-//
-//
-//
+
 module.exports = {
   seeTools,
   seeOneTool,
   addTool,
   editTool,
   deleteTool
-//   signOut,
-//   changePW
 }

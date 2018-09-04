@@ -48,6 +48,11 @@ const deleteTool = function () {
     .then(ui.deleteToolSuccess)
     .catch(ui.fail)
 }
+const swingHammer = () => {
+  $(() => {
+    $('.hammer-fit').toggleClass('.hammerstrike')
+  })
+}
 
 const handlers = function () {
   $('#get-tools').on('click', seeTools)
@@ -55,6 +60,7 @@ const handlers = function () {
   $('#add-a-tool').on('submit', addTool)
   $('#edit-a-tool').on('submit', editTool)
   $('#tool-list').on('click', '#delete-tool', deleteTool)
+  swingHammer()
 }
 
 module.exports = {
