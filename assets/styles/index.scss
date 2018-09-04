@@ -14,16 +14,32 @@ h1 {
   font-family: 'Inknut Antiqua';
 }
 .hammer-fit {
+  position:relative;
+  left: -15px;
+  top: 40px;
   color:white;
   height: 100px;
   width: 100px;
   display: block;
   margin: 0 auto;
-  transition: transform .5s linear;
-  transform-origin: center;
+  transition: transform 1s ease-in;
+  transform-origin: right;
 }
 
 .hammerstrike {
 transition-delay: 1s;
-transform: rotate(-45deg);
+transform: rotate(-315deg);
+}
+
+.signup-in {
+  position: relative;
+  left:425px;
+  top: -100px;
+  transition: transform .70s ease-out;
+  transform-origin: center;
+}
+
+.buttonsweep {
+  transition-delay: 2.02s;
+  transform: translateX(-415px);
 }

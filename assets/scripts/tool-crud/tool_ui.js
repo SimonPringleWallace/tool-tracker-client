@@ -1,5 +1,6 @@
 const indexToolsHBars = require('../handle-bars/tool-lists.handlebars')
 const showToolHBars = require('../handle-bars/single-tool.handlebars')
+const toolAPIs = require('./tool_apis.js')
 
 const displayTools = (serverResponse) => {
   const showToolsHtml = indexToolsHBars({ tools: serverResponse.tools })
@@ -19,7 +20,7 @@ const editToolSuccess = function (serverResponse) {
 }
 
 const deleteToolSuccess = function () {
-  console.log('tool deleted')
+  toolAPIs.seeTools()
 }
 
 const fail = function () {

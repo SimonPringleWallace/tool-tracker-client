@@ -14,4 +14,5 @@ $(() => {
   userAuth.handlers()
   toolCrud.handlers()
   $('.hammer-fit').toggleClass('hammerstrike')
+  $('.signup-in').toggleClass('buttonsweep')
 })

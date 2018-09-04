@@ -43,7 +43,6 @@ const editTool = function () {
 const deleteTool = function () {
   event.preventDefault()
   const toolId = $(event.target).parent().data('id')
-  console.log('clicked ' + toolId)
   api.deleteTool(toolId)
     .then(ui.deleteToolSuccess)
     .catch(ui.fail)
