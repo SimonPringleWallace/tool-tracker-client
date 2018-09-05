@@ -28,15 +28,15 @@ h1 {
 }
 
 .hammerstrike {
-transition-delay: 1s;
+transition-delay: 1.5s;
 transform: rotate(-315deg);
 }
 
-.signup-in {
+.signup-in-buttons {
   position: relative;
   left:425px;
   top: -100px;
-  transition: transform .70s ease-out;
+  transition: transform .60s ease-out;
   transform-origin: center;
   margin-left: 10px;
   width: auto;
@@ -48,7 +48,7 @@ transform: rotate(-315deg);
 }
 
 .buttonsweep {
-  transition-delay: 2.02s;
+  transition-delay: 2.48s;
   transform: translateX(-400px);
 }
 
@@ -57,9 +57,9 @@ transform: rotate(-315deg);
   color: white;
   margin-left:215px;
   margin-top:-20px;
-  font-size: 25px;
+  font-size: 26px;
   text-shadow: -2px 1px grey;
-  animation: fadein 5.25s;
+  animation: fadein 5.75s;
 }
 
 @keyframes fadein {

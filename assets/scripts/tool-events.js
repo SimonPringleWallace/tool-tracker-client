@@ -55,7 +55,7 @@ const handlers = function () {
   $('#edit-a-tool').on('submit', editTool)
   $('#tool-list').on('click', '#delete-tool', deleteTool)
   $('.hammer-fit').toggleClass('hammerstrike')
-  $('.signup-in').toggleClass('buttonsweep')
+  $('.signup-in-buttons').toggleClass('buttonsweep')
   // $('.clutter').toggleClass('clutterFadeIn')
 }
 
