@@ -8,12 +8,12 @@ import 'bootstrap'
 // allows usage of new JS features
 require('babel-polyfill')
 
+// images
+require('./images/')
+
 // load manifests
 // scripts
 require('./assets/scripts/app.js')
 
 // styles
 require('./assets/styles/index.scss')
-
-// images
-require('./images')
