@@ -5,19 +5,18 @@ const userSignOut = require('./signed-out-view.js')
 
 const signUpSuccess = function () {
   $('#sign-up-modal-button').hide()
-  console.log('Welcome! <br> What are you waiting for? <br> Sign in!')
+  $('#message-box').html('Welcome! <br/> What are you waiting for? Sign In!.')
 }
 
 const signInSuccess = function (serverResponse) {
   userSignIn.signInProcesses(serverResponse)
-  console.log(store.user)
 }
 const signInFail = function () {
-  console.log('You lie! <br> Please check your credentials and try again')
+  $('#message-box').html('Like mixing concrete with a banana. Fail! <br/> Please check your credentials and try again.')
 }
 
 const fail = function () {
-  console.log('fail!')
+  $('#message-box').html('Nope! That failed, please try again')
 }
 
 const signOutSuccess = function () {
@@ -29,7 +28,7 @@ const signOutFailure = function () {
 }
 
 const changePWSuccess = function () {
-  console.log('your password has changed')
+  $('#message-box').html('your password has changed')
 }
 
 module.exports = {

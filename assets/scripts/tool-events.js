@@ -15,7 +15,6 @@ const toolListRefresh = function () {
   api.seeTools()
     .then(ui.displayTools)
     .catch(ui.fail)
-  event.preventDefault()
   return false
 }
 
@@ -44,6 +43,7 @@ const editTool = function () {
   const data = getFormFields(event.target)
   api.editTool(data)
     .then(ui.editToolSuccess)
+    .then(toolListRefresh)
     .catch(ui.fail)
   document.getElementById('edit-a-tool').reset()
   return false

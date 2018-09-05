@@ -13,7 +13,8 @@ const displayOneTool = function (serverResponse) {
 }
 
 const addToolSuccess = function (serverResponse) {
-  console.log(serverResponse.tool)
+  $('#message-box').html(`You added ${serverResponse.tool.quantity}
+    ${serverResponse.tool.name}`)
 }
 const editToolSuccess = function (serverResponse) {
   console.log(serverResponse.tool)
@@ -25,7 +26,7 @@ const deleteToolSuccess = function () {
 }
 
 const fail = function () {
-  console.log('fail!')
+  $('#message-box').html('Nope! That failed, please try again')
 }
 
 module.exports = {

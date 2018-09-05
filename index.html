@@ -15,7 +15,7 @@
 
     <body>
       <h1>Tool Tracker</h1>
-       <img class="hammer-fit" src="./images/hammer.png">
+       <img class="hammer-fit" src="./images/hammer.png"
       <div class="home">
           <div class="signup-in-buttons">
              <button type="button" id="sign-in-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-in-modal">
@@ -27,6 +27,9 @@
              </button>
              <div class="clutter"> Kick the clutter </div>
          </div>
+        <div class="m-box-flex">
+         <div id="message-box"></div>
+       </div>
        <!-- Modal body -->
        <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered" role="document">
@@ -134,7 +137,7 @@
 <form id="add-a-tool">
   <input type="name" name="tools[name]" placeholder="tool name">
   <input type="name" name="tools[quantity]" placeholder="tool quantity">
-  <input type="name" name="tools[available]" placeholder="tool available">
+  <input type="select" name="tools[available]" placeholder="tool available">
 <button type="submit"> Add a tool!</button>
 </form>
 
@@ -146,10 +149,7 @@
 <button type="submit"> edit a tool!</button>
 </form>
 
-
-
-
-       <div id="tool-list"></div>
+  <div id="tool-list"></div>
 
        <div id="fail">
          <p> Someone screwed up.</p>

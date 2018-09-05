@@ -4,12 +4,11 @@ const ui = require('./user_auth/auth_ui.js')
 // const store = require('./../store.js')
 
 const signUp = function () {
+  event.preventDefault()
   const data = getFormFields(event.target)
-
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.fail)
-  event.preventDefault()
   $('#sign-up-modal').modal('hide')
   return false
 }
@@ -44,11 +43,10 @@ const changePW = function () {
   return false
 }
 //
-// const hideRudeness = function () {
-//   event.preventDefault()
-//   $('#winbox').html('')
-//   $('#fail').hide()
-// }
+const hideRudeness = function () {
+  event.preventDefault()
+  $('#message-box').html('')
+}
 //
 // const wipeGames = function () {
 //   event.preventDefault()
@@ -66,7 +64,7 @@ const handlers = function () {
   $('#sign-in').on('submit', signIn)
   $('#sign-out').on('click', signOut)
   $('#change-password').on('submit', changePW)
-  // $('#change-password-modal-button').on('click', hideRudeness)
+  $('#change-password-modal-button, #sign-in-modal-button, #sign-up-modal-button').on('click', hideRudeness)
   // $('#previous-conquests').on('hidden.bs.modal', wipeGames)
   $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)
 }
