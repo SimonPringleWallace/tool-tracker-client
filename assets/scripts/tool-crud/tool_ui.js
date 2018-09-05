@@ -3,10 +3,13 @@ const showToolHBars = require('../handle-bars/single-tool.handlebars')
 // const toolEvents = require('../tool-events.js')
 
 const displayTools = (serverResponse) => {
-  const showToolsHtml = indexToolsHBars({ tools: serverResponse.tools })
-  $('#tool-list').html(showToolsHtml)
+  if (serverResponse.tools.length === 0) {
+    $('#tool-list').html("You're not tracking any tools yet <br/> add some to start!")
+  } else {
+    const showToolsHtml = indexToolsHBars({ tools: serverResponse.tools })
+    $('#tool-list').html(showToolsHtml)
+  }
 }
-
 const displayOneTool = function (serverResponse) {
   const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
   $('#tool-list').html(showToolsHtml)

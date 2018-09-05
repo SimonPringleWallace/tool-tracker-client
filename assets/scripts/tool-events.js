@@ -33,6 +33,7 @@ const addTool = function () {
   const data = getFormFields(event.target)
   api.addTool(data)
     .then(ui.addToolSuccess)
+    .then(toolListRefresh)
     .catch(ui.fail)
   document.getElementById('add-a-tool').reset()
   return false

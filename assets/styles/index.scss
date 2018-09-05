@@ -2,10 +2,10 @@
 // images
 
 body {
-  background-image: url('public/blueprintv3.png');
+  background-image: url('public/blueprintv3-50.jpg');
   background-size: cover;
   color: white;
-  background-position: absolute;
+  background-position: relative;
   font-flamily: 'Inknut Antiqua';
 }
 h1 {
@@ -81,5 +81,6 @@ transform: rotate(-315deg);
   position: absolute;
   color: white;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 25px;
+  text-shadow: -2px 1px grey;
 }
