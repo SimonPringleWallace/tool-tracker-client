@@ -65,7 +65,6 @@ const handlers = function () {
   $('#tool-list').on('click', '#delete-tool', deleteTool)
   $('.hammer-fit').toggleClass('hammerstrike')
   $('.signup-in-buttons').toggleClass('buttonsweep')
-  // $('.clutter').toggleClass('clutterFadeIn')
 }
 
 module.exports = {

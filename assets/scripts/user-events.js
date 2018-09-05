@@ -1,7 +1,6 @@
 const getFormFields = require('../../lib/get-form-fields.js')
 const api = require('./user_auth/auth_apis.js')
 const ui = require('./user_auth/auth_ui.js')
-// const store = require('./../store.js')
 
 const signUp = function () {
   event.preventDefault()
@@ -42,30 +41,22 @@ const changePW = function () {
   $('#change-password-modal').modal('hide')
   return false
 }
-//
+
 const hideRudeness = function () {
   event.preventDefault()
   $('#message-box').html('')
 }
-//
-// const wipeGames = function () {
-//   event.preventDefault()
-//   $('#games-holder').html('')
-// }
-//
+
 const clearOnClose = function () {
   $('input').val('')
 }
-//
+
 const handlers = function () {
-  // $('#sign-in-modal-button').on('click', signIn)
   $('#sign-up').on('submit', signUp)
-  // $('#sign-up-modal-button').on('click', hideRudeness)
   $('#sign-in').on('submit', signIn)
   $('#sign-out').on('click', signOut)
   $('#change-password').on('submit', changePW)
   $('#change-password-modal-button, #sign-in-modal-button, #sign-up-modal-button').on('click', hideRudeness)
-  // $('#previous-conquests').on('hidden.bs.modal', wipeGames)
   $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)
 }
 

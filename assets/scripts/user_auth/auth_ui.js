@@ -1,5 +1,4 @@
 'use strict'
-const store = require('../store.js')
 const userSignIn = require('./signed-in-view.js')
 const userSignOut = require('./signed-out-view.js')
 
