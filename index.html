@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Tool Tracker</title>
+      <title>The Hammer | Tool Inventory Management</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua:700" rel="stylesheet">
 
@@ -14,148 +14,134 @@
     </head>
 
     <body>
-      <h1>Tool Tracker</h1>
-       <img class="hammer-fit" src="public/hammer.png"
-      <div class="home">
-          <div class="signup-in-buttons">
-             <button type="button" id="sign-in-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-in-modal">
-               Sign In
-             </button>
+      <h1>The Hammer</h1>
+        <img class="hammer-fit" src="public/hammer.png"
+          <div class="home">
+              <div class="signup-in-buttons">
+                 <button type="button" id="sign-in-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-in-modal">
+                   Sign In
+                 </button>
 
-             <button type="button" id="sign-up-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-up-modal">
-               Create Account
-             </button>
-             <div class="clutter"> Kick the clutter </div>
-         </div>
-        <div class="m-box-flex">
-         <div id="message-box"></div>
-       </div>
-       <!-- Modal body -->
-       <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered" role="document">
-           <div class="modal-content">
-             <div class="modal-header">
-               <h5 class="modal-title sign-in-modal" > Sign In </h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
+                 <button type="button" id="sign-up-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-up-modal">
+                   Create Account
+                 </button>
+                 <div class="clutter"> Kick the clutter </div>
+             </div>
+            <div class="m-box-flex">
+             <div id="message-box"></div>
+           </div>
 
-             </div>
-             <div class="modal-body">
-               <form id="sign-in">
-                      <input type="text" name="credentials[email]" placeholder="Email">
-                      <input type="password" name="credentials[password]" placeholder="Password">
-             </div>
-             <div class="modal-footer">
-               <button type="button" class="close-btn" data-dismiss="modal">Close</button>
-               <button type="submit"> Get Playin'!</button>
-              </form>
+ <!-- Sign-In Modal body -->
+
+           <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title sign-in-modal" > Sign In </h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+
+                 </div>
+                 <div class="modal-body">
+                   <form id="sign-in">
+                          <input type="text" name="credentials[email]" placeholder="Email">
+                          <input type="password" name="credentials[password]" placeholder="Password">
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                   <button type="submit"> Get Playin'!</button>
+                  </form>
+                 </div>
+               </div>
              </div>
            </div>
-         </div>
-       </div>
 
-<!-- Sign Up Modal -->
+<!-- Signup Modal body -->
 
+          <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title sign-up-modal" > Create Account </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
 
+                </div>
+                <div class="modal-body">
+                  <form id="sign-up">
+                    <input type="text" name="credentials[email]" placeholder="Email">
+                    <input type="password" name="credentials[password]" placeholder="Password" autocomplete="off">
+                    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                  <button type="submit"> Create Account!</button>
+                 </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<!-- Modal body -->
-<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title sign-up-modal" > Create Account </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<!-- Change Password Modal Button-->
 
-      </div>
-      <div class="modal-body">
-        <form id="sign-up">
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password" autocomplete="off">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="close-btn" data-dismiss="modal">Close</button>
-        <button type="submit"> Create Account!</button>
-       </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
- <button id="new-game"> Start! </button>
-</div>
-
-
-<div class="menu">
-
-  <!-- Change Password Modal -->
-
-  <button type="button" id="change-password-modal-button" class="btn-primary" data-toggle="modal" data-target="#change-password-modal">
-    Change Password
-  </button>
-
-  <!-- Modal body -->
-  <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title change-password-modal" > Change Password </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" id="change-password-modal-button" class="btn-primary" data-toggle="modal" data-target="#change-password-modal">
+            Change Password
           </button>
 
-        </div>
-        <div class="modal-body">
-          <form id="change-password">
-            <input type="password" name="passwords[old]" placeholder="Current Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="close-btn" data-dismiss="modal">Close</button>
-          <button type="submit"> Change it up!</button>
-         </form>
-        </div>
-      </div>
-    </div>
-  </div>
-         <button id="sign-out"> Sign Out! </button>
-</div>
-<form id="get-tools">
-  <button type="submit"> get all the tools!</button>
-</form>
+          <!--Change Password Modal body -->
+          <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title change-password-modal" > Change Password </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="change-password">
+                    <input type="password" name="passwords[old]" placeholder="Current Password">
+                    <input type="password" name="passwords[new]" placeholder="New Password">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                  <button type="submit"> Change it up!</button>
+                 </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<form id="see-one-tool">
-  <input type="name" name="id" placeholder="tool name use 3">
-  <button type="submit"> see one tool!</button>
-</form>
+        <button id="sign-out"> Sign Out! </button>
 
-<form id="add-a-tool">
-  <input type="name" name="tools[name]" placeholder="tool name">
-  <input type="name" name="tools[quantity]" placeholder="tool quantity">
-  <input type="select" name="tools[available]" placeholder="tool available">
-<button type="submit"> Add a tool!</button>
-</form>
+        <form id="get-tools">
+          <button type="submit"> get all the tools!</button>
+        </form>
 
-<form id="edit-a-tool">
-  <input type="name" name="id" placeholder="tool id">
-  <input type="name" name="tools[name]" placeholder="tool name">
-  <input type="name" name="tools[quantity]" placeholder="tool quantity">
-  <input type="name" name="tools[available]" placeholder="tool available">
-<button type="submit"> edit a tool!</button>
-</form>
+        <form id="see-one-tool">
+          <input type="name" name="id" placeholder="tool name use 3">
+          <button type="submit"> see one tool!</button>
+        </form>
 
-  <div id="tool-list"></div>
+        <form id="add-a-tool">
+          <input type="name" name="tools[name]" placeholder="tool name">
+          <input type="name" name="tools[quantity]" placeholder="tool quantity">
+          <input type="select" name="tools[available]" placeholder="tool available">
+        <button type="submit"> Add a tool!</button>
+        </form>
 
-       <div id="fail">
-         <p> Someone screwed up.</p>
-         <img src='https://i.imgur.com/luN2Lwj.jpg' alt="boom!">
-         <p> Please try again.</p>
-      </div>
+        <form id="edit-a-tool">
+          <input type="name" name="id" placeholder="tool id">
+          <input type="name" name="tools[name]" placeholder="tool name">
+          <input type="name" name="tools[quantity]" placeholder="tool quantity">
+          <input type="name" name="tools[available]" placeholder="tool available">
+        <button type="submit"> edit a tool!</button>
+        </form>
+
+        <div id="tool-list"></div>
+
     </body>
-    </body>
+
 </html>

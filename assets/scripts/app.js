@@ -9,7 +9,7 @@
 const userAuth = require('./user-events.js')
 const toolCrud = require('./tool-events.js')
 
-$('#new-game, #sign-out, #change-password-modal-button, #get-tools, #see-one-tool, #add-a-tool, #edit-a-tool, #fail').hide()
+$('#sign-out, #change-password-modal-button, #get-tools, #see-one-tool, #add-a-tool, #edit-a-tool, #fail').hide()
 $(() => {
   userAuth.handlers()
   toolCrud.handlers()
