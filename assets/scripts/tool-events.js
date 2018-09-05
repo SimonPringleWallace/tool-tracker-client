@@ -11,6 +11,14 @@ const seeTools = function () {
   return false
 }
 
+const toolListRefresh = function () {
+  api.seeTools()
+    .then(ui.displayTools)
+    .catch(ui.fail)
+  event.preventDefault()
+  return false
+}
+
 const seeOneTool = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -45,6 +53,7 @@ const deleteTool = function () {
   const toolId = $(event.target).parent().data('id')
   api.deleteTool(toolId)
     .then(ui.deleteToolSuccess)
+    .then(toolListRefresh)
     .catch(ui.fail)
 }
 
