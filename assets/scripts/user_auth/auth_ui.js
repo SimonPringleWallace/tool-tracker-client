@@ -11,11 +11,11 @@ const signInSuccess = function (serverResponse) {
   userSignIn.signInProcesses(serverResponse)
 }
 const signInFail = function () {
-  $('#message-box').html('Like mixing concrete with a banana. Fail! <br/> Please check your credentials and try again.')
+  $('#message-box').html('You swing a hammer that recklessly? <br/> Please check your credentials and try again.')
 }
 
 const fail = function () {
-  $('#message-box').html('Nope! That failed, please try again')
+  $('#message-box').html('Like mixing concreate with a Pixie Stick - Fail! <br/> Please try again')
 }
 
 const signOutSuccess = function () {

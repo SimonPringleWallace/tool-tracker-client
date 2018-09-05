@@ -20,7 +20,7 @@ const addToolSuccess = function (serverResponse) {
     ${serverResponse.tool.name}`)
 }
 const editToolSuccess = function (serverResponse) {
-  console.log(serverResponse.tool)
+  $('#message-box').html('')
 }
 
 const deleteToolSuccess = function () {

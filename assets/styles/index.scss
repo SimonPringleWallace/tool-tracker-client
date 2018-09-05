@@ -2,7 +2,7 @@
 // images
 
 body {
-  background-image: url('public/blueprintv3-50.jpg');
+  background-image: url('public/blueprintv3-c-15.jpg');
   background-size: cover;
   color: white;
   background-position: relative;
@@ -30,7 +30,7 @@ h1 {
 }
 
 .hammerstrike {
-transition-delay: 1.5s;
+transition-delay: 1.25s;
 transform: rotate(-315deg);
 }
 
@@ -50,7 +50,7 @@ transform: rotate(-315deg);
 }
 
 .buttonsweep {
-  transition-delay: 2.48s;
+  transition-delay: 2.23s;
   transform: translateX(-400px);
 }
 
@@ -61,7 +61,7 @@ transform: rotate(-315deg);
   margin-top:-20px;
   font-size: 26px;
   text-shadow: -2px 1px grey;
-  animation: fadein 5.75s;
+  animation: fadein 5.5s;
 }
 
 @keyframes fadein {
@@ -73,6 +73,16 @@ transform: rotate(-315deg);
 .m-box-flex {
   display: flex;
   justify-content: center;
+}
+
+.modal {
+  color:black;
+}
+button {
+  border-radius:4px;
+}
+input {
+  border-radius:4px;
 }
 
 #message-box {
