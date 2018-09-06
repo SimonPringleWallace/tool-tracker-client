@@ -18,9 +18,10 @@ const displayOneTool = function (serverResponse) {
 }
 
 const addToolSuccess = function (serverResponse) {
-  $('#message-box').html(`You added ${serverResponse.tool.quantity}
-    ${serverResponse.tool.name}`)
+  // $('#message-box').html(`You added ${serverResponse.tool.quantity}
+  //   ${serverResponse.tool.name}`)
 }
+
 const editToolSuccess = function (serverResponse) {
   $('#message-box').html('')
 }
