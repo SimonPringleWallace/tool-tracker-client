@@ -51,7 +51,7 @@ const editTool = function () {
 }
 const deleteTool = function () {
   event.preventDefault()
-  const toolId = $(event.target).parent().data('id')
+  const toolId = $(event.target).closest('section').data('id')
   api.deleteTool(toolId)
     .then(ui.deleteToolSuccess)
     .then(toolListRefresh)
