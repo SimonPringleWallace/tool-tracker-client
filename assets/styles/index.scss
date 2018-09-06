@@ -1,5 +1,4 @@
 @import '~bootstrap/scss/bootstrap';
-// images
 
 body {
   background-image: url('public/blueprintv3-c-15.jpg');
@@ -8,6 +7,21 @@ body {
   background-position: relative;
   font-flamily: 'Inknut Antiqua';
 }
+
+button {
+  border-radius:4px;
+}
+
+.clutter {
+  font-flamily: 'Inknut Antiqua';
+  color: white;
+  margin-left:215px;
+  margin-top:-20px;
+  font-size: 26px;
+  text-shadow: -2px 1px grey;
+  animation: fadein 5.5s;
+}
+
 h1 {
   outline-color: black;
   text-align: center;
@@ -16,6 +30,7 @@ h1 {
   color: white;
   text-shadow: -4px 2px grey;
 }
+
 .hammer-fit {
   position:relative;
   left: -15px;
@@ -34,34 +49,8 @@ transition-delay: 1.25s;
 transform: rotate(-315deg);
 }
 
-.signup-in-buttons {
-  position: relative;
-  left:425px;
-  top: -100px;
-  transition: transform .60s ease-out;
-  transform-origin: center;
-  margin-left: 10px;
-  width: auto;
-  height:auto;
-  display: inline-flex;
-}
-#sign-up-modal-button {
-  margin-left: 10px;
-}
-
-.buttonsweep {
-  transition-delay: 2.23s;
-  transform: translateX(-400px);
-}
-
-.clutter {
-  font-flamily: 'Inknut Antiqua';
-  color: white;
-  margin-left:215px;
-  margin-top:-20px;
-  font-size: 26px;
-  text-shadow: -2px 1px grey;
-  animation: fadein 5.5s;
+input {
+  border-radius:4px;
 }
 
 @keyframes fadein {
@@ -75,16 +64,6 @@ transform: rotate(-315deg);
   justify-content: center;
 }
 
-.modal {
-  color:black;
-}
-button {
-  border-radius:4px;
-}
-input {
-  border-radius:4px;
-}
-
 #message-box {
   text-align: center;
   display: inline-block;
@@ -93,4 +72,34 @@ input {
   font-weight: 500;
   font-size: 25px;
   text-shadow: -2px 1px grey;
+}
+
+.modal {
+  color:black;
+}
+
+.signup-in-buttons {
+  position: relative;
+  left:425px;
+  top: -100px;
+  transition: transform .60s ease-out;
+  transform-origin: center;
+  margin-left: 10px;
+  width: auto;
+  height:auto;
+  display: inline-flex;
+}
+
+.signup-in-button-sweep {
+  transition-delay: 2.23s;
+  transform: translateX(-400px);
+}
+
+#sign-up-modal-button {
+  margin-left: 10px;
+}
+
+.tool-items {
+  margin-left:10px;
+  margin-top: 10px;
 }

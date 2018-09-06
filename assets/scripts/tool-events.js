@@ -65,7 +65,7 @@ const handlers = function () {
   $('#edit-a-tool').on('submit', editTool)
   $('#tool-list').on('click', '#delete-tool', deleteTool)
   $('.hammer-fit').toggleClass('hammerstrike')
-  $('.signup-in-buttons').toggleClass('buttonsweep')
+  $('.signup-in-buttons').toggleClass('signup-in-button-sweep')
 }
 
 module.exports = {
