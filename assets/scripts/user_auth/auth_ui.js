@@ -3,7 +3,6 @@ const userSignIn = require('./signed-in-view.js')
 const userSignOut = require('./signed-out-view.js')
 
 const signUpSuccess = function () {
-  $('#sign-up-modal-button').hide()
   $('#message-box').html('Welcome! <br/> What are you waiting for? Sign In!')
 }
 
