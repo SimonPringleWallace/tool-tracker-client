@@ -3,6 +3,7 @@ const showToolHBars = require('../handle-bars/single-tool.handlebars')
 // const toolEvents = require('../tool-events.js')
 
 const displayTools = (serverResponse) => {
+  $('#message-box').html('')
   if (serverResponse.tools.length === 0) {
     $('#tool-list').html("You're not tracking any tools yet <br/> add some to start!")
   } else {
@@ -10,13 +11,10 @@ const displayTools = (serverResponse) => {
     $('#tool-list').html(showToolsHtml)
   }
 }
+
 const displayOneTool = function (serverResponse) {
-  if (serverResponse.tools.length === 0) {
-    $('#tool-list').html("You're not tracking any tools yet <br/> add some to start!")
-  } else {
-    const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
-    $('#tool-list').html(showToolsHtml)
-  }
+  const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
+  $('#tool-list').html(showToolsHtml)
 }
 
 const addToolSuccess = function (serverResponse) {
@@ -29,6 +27,7 @@ const editToolSuccess = function (serverResponse) {
 
 const fail = function () {
   $('#message-box').html('Nope! That failed, please try again')
+  $('#tool-list').html('')
 }
 
 module.exports = {

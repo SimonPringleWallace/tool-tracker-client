@@ -21,9 +21,13 @@ const toolListRefresh = function () {
 const seeOneTool = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.seeOneTool(data)
-    .then(ui.displayOneTool)
-    .catch(ui.fail)
+  if (data.id) {
+    api.seeOneTool(data)
+      .then(ui.displayOneTool)
+      .catch(ui.fail)
+  } else {
+    ui.fail()
+  }
   document.getElementById('see-one-tool').reset()
   return false
 }
