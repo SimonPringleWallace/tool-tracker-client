@@ -11,8 +11,12 @@ const displayTools = (serverResponse) => {
   }
 }
 const displayOneTool = function (serverResponse) {
-  const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
-  $('#tool-list').html(showToolsHtml)
+  if (serverResponse.tools.length === 0) {
+    $('#tool-list').html("You're not tracking any tools yet <br/> add some to start!")
+  } else {
+    const showToolsHtml = showToolHBars({ tool: serverResponse.tool })
+    $('#tool-list').html(showToolsHtml)
+  }
 }
 
 const addToolSuccess = function (serverResponse) {
@@ -21,11 +25,6 @@ const addToolSuccess = function (serverResponse) {
 }
 const editToolSuccess = function (serverResponse) {
   $('#message-box').html('')
-}
-
-const deleteToolSuccess = function () {
-  console.log('tool deleted')
-  // toolEvents.seeTools()
 }
 
 const fail = function () {
@@ -37,6 +36,5 @@ module.exports = {
   fail,
   displayOneTool,
   addToolSuccess,
-  editToolSuccess,
-  deleteToolSuccess
+  editToolSuccess
 }

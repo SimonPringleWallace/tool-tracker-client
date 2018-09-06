@@ -53,7 +53,6 @@ const deleteTool = function () {
   event.preventDefault()
   const toolId = $(event.target).closest('section').data('id')
   api.deleteTool(toolId)
-    .then(ui.deleteToolSuccess)
     .then(toolListRefresh)
     .catch(ui.fail)
 }

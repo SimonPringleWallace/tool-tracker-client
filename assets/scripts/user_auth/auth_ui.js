@@ -4,7 +4,7 @@ const userSignOut = require('./signed-out-view.js')
 
 const signUpSuccess = function () {
   $('#sign-up-modal-button').hide()
-  $('#message-box').html('Welcome! <br/> What are you waiting for? Sign In!.')
+  $('#message-box').html('Welcome! <br/> What are you waiting for? Sign In!')
 }
 
 const signInSuccess = function (serverResponse) {
@@ -23,7 +23,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  console.log('You will never leave me! <br> Sign out failed, please try again.')
+  $('#message-box').html('You will never leave me! <br> Sign out failed, please try again.')
 }
 
 const changePWSuccess = function () {
