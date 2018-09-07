@@ -2,11 +2,12 @@
   The Hammer is a tool inventory managment system inspired by the need for easy
   to use accessible, and cost effective IMSs in the non-profit sector.
   Built primarily utilizing Javascript, the focus of this iteration of
-  'The Hammer' remained on firm API integration with a custom server.
+  'The Hammer' remained on firm API integration with a [custom server](https://github.com/SimonPringleWallace/tool-tracker-server) hosted on
+  Heroku.
 
   While 'The Hammer' provides a promising UI from the start, styling the many
   components and forms in an effecient and user friendly way proved challenging
-  and the UI of the landing page post sign-in, while feasiblel, remains the focus
+  and the UI of the landing page post sign-in, while feasible, remains the focus
   of future work.
 
   Overall the greatest challenges came from the integration of new techniques
