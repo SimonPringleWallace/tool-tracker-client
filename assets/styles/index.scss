@@ -2,21 +2,31 @@
 @import './hammer.scss';
 @import './signup-in-buttons.scss';
 
+
 body {
   background-image: url('public/blueprintv3-c-15.jpg');
   background-size: cover;
   color: white;
   background-position: relative;
   font-flamily: 'Inknut Antiqua';
+  font-size:100%;
 }
-
-h1 {
-  outline-color: black;
-  text-align: center;
-  margin-top: 100px;
-  font-size: 80px;
-  color: white;
-  text-shadow: -4px 2px grey;
+.headline {
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 100px;
+font-size: 80px;
+outline-color: black;
+text-align: center;
+color: white;
+text-shadow: -4px 2px grey;
+}
+.the-r {
+  margin-top: -12px;
+}
+h1{
+  font-size:80px;
 }
 
 input {
