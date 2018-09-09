@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import './hammer.scss';
+@import './signup-in-buttons.scss';
 
 body {
   background-image: url('public/blueprintv3-c-15.jpg');
@@ -6,10 +8,6 @@ body {
   color: white;
   background-position: relative;
   font-flamily: 'Inknut Antiqua';
-}
-
-button {
-  border-radius:4px;
 }
 
 .clutter {
@@ -29,24 +27,6 @@ h1 {
   font-size: 80px;
   color: white;
   text-shadow: -4px 2px grey;
-}
-
-.hammer-fit {
-  position:relative;
-  left: -15px;
-  top: 40px;
-  color:white;
-  height: 100px;
-  width: 100px;
-  display: block;
-  margin: 0 auto;
-  transition: transform 1s ease-in;
-  transform-origin: right;
-}
-
-.hammerstrike {
-transition-delay: 1.25s;
-transform: rotate(-315deg);
 }
 
 input {
@@ -76,27 +56,6 @@ input {
 
 .modal {
   color:black;
-}
-
-.signup-in-buttons {
-  position: relative;
-  left:425px;
-  top: -100px;
-  transition: transform .60s ease-out;
-  transform-origin: center;
-  margin-left: 10px;
-  width: auto;
-  height:auto;
-  display: inline-flex;
-}
-
-.signup-in-button-sweep {
-  transition-delay: 2.23s;
-  transform: translateX(-400px);
-}
-
-#sign-up-modal-button {
-  margin-left: 10px;
 }
 
 .tool-items {

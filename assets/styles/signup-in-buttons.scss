@@ -1,0 +1,23 @@
+button {
+  border-radius:4px;
+}
+.signup-in-buttons {
+  position: relative;
+  left:425px;
+  top: -100px;
+  transition: transform .60s ease-out;
+  transform-origin: center;
+  margin-left: 10px;
+  width: auto;
+  height:auto;
+  display: inline-flex;
+}
+
+.signup-in-button-sweep {
+  transition-delay: 2.23s;
+  transform: translateX(-400px);
+}
+
+#sign-up-modal-button {
+  margin-left: 10px;
+}

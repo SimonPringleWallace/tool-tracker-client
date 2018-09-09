@@ -1,0 +1,17 @@
+.hammer-fit {
+  position:relative;
+  left: -15px;
+  top: 40px;
+  color:white;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 1s ease-in;
+  transform-origin: right;
+}
+
+.hammerstrike {
+transition-delay: 1.25s;
+transform: rotate(-315deg);
+}
