@@ -1,23 +1,39 @@
 button {
   border-radius:4px;
 }
+
+// contains both buttons and the 'kick the clutter' text
 .signup-in-buttons {
-  position: relative;
-  left:425px;
-  top: -100px;
+  display:flex;
+  justify-content:space-around;
   transition: transform .60s ease-out;
   transform-origin: center;
-  margin-left: 10px;
   width: auto;
   height:auto;
-  display: inline-flex;
 }
 
 .signup-in-button-sweep {
   transition-delay: 2.23s;
-  transform: translateX(-400px);
+  transform: translateX(-420px);
 }
 
-#sign-up-modal-button {
-  margin-left: 10px;
+#sign-in-modal-button {
+  margin: 0px -280px 0px 280px;
+}
+
+.clutter {
+  font-flamily: 'Inknut Antiqua';
+  color: white;
+  font-size: 26px;
+  text-shadow: -2px 1px grey;
+  margin-right: 90px;
+  margin-left: -90px;
+  animation: fadein 5.5s;
+}
+
+// fade-in animation for 'kick the clutter'
+@keyframes fadein {
+  0% {opacity: 0;}
+  80% {opacity: 0;}
+  100% {opacity: 1}
 }

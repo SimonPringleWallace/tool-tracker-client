@@ -1,12 +1,13 @@
-.hammer-fit {
-  position:relative;
-  left: -15px;
-  top: 40px;
-  color:white;
+.hammer-message-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+
+}
+.hammer {
   height: 100px;
   width: 100px;
-  display: block;
-  margin: 0 auto;
   transition: transform 1s ease-in;
   transform-origin: right;
 }

@@ -1,7 +1,7 @@
 'use strict'
 
 const signOutView = function () {
-  $('#change-password-modal-button, #sign-out, #get-tools, #see-one-tool, #add-a-tool, #edit-a-tool').hide()
+  $('#change-password-modal-button, #sign-out, #get-tools, #see-one-tool, #add-a-tool, #edit-a-tool, #create-tool-button').hide()
   $('.signup-in-buttons').show()
   $('#tool-list, #message-box').html('')
 }

@@ -14,22 +14,24 @@
     </head>
 
     <body>
-      <h1>The Hammer</h1>
-        <img class="hammer-fit" src="public/hammer-grey-lgrey-reverse.png"
-          <div class="home">
-              <div class="signup-in-buttons">
-                 <button type="button" id="sign-in-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-in-modal">
-                   Sign In
-                 </button>
 
-                 <button type="button" id="sign-up-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-up-modal">
-                   Create Account
-                 </button>
-                 <div class="clutter"> Kick the clutter </div>
-             </div>
-            <div class="m-box-flex">
-             <div id="message-box"></div>
-           </div>
+      <h1>The Hammer</h1>
+      <div class="signup-in-buttons">
+         <button type="button" id="sign-in-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-in-modal">
+           Sign In
+         </button>
+
+         <button type="button" id="sign-up-modal-button" class="btn-primary" data-toggle="modal" data-target="#sign-up-modal">
+           Create Account
+         </button>
+         <div class="clutter"> Kick the clutter </div>
+     </div>
+     <div class="hammer-message-flex">
+        <img class="hammer" src="public/hammer-grey-lgrey-reverse.png">
+      <div class="m-box-flex">
+       <div id="message-box"></div>
+     </div>
+   </div>
 
  <!-- Sign-In Modal body -->
 
@@ -125,18 +127,31 @@
           <button type="submit"> see one tool!</button>
         </form>
 
-        <form id="add-a-tool">
-          <input type="name" name="tools[name]" placeholder="tool name">
-          <input type="name" name="tools[quantity]" placeholder="tool quantity">
-          <input type="select" name="tools[available]" placeholder="available? true/false">
-        <button type="submit"> Add a tool!</button>
-        </form>
+
+<button id="create-tool-button" type="button"> Create a new tool </button>
+
+        <div class="create-tool">
+          <form id="add-a-tool">
+            <input type="name" name="tools[name]" placeholder="tool name">
+            <input type="name" name="tools[quantity]" placeholder="tool quantity">
+            Available?
+              <select name="tools[available]" form="add-a-tool">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+              </select>
+            <button type="submit"> Add a tool!</button>
+          </form>
+        </div>
 
         <form id="edit-a-tool">
           <input type="name" name="id" placeholder="tool id">
           <input type="name" name="tools[name]" placeholder="tool name">
           <input type="name" name="tools[quantity]" placeholder="tool quantity">
-          <input type="name" name="tools[available]" placeholder="available ?true/false">
+          Available?
+          <select name="tools[available]" form="edit-a-tool">
+          <option value="true">True</option>
+          <option value="false">False</option>
+          </select>
         <button type="submit"> edit a tool!</button>
         </form>
 
