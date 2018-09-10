@@ -12,12 +12,37 @@ button {
   height:auto;
 }
 
+.sign-up-in-container {
+  display:flex;
+  justify-content: center;
+}
+
+#sign-in > input  {
+width:200px;
+margin: 10px;
+}
+
+#sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:300px;
+  width: 300px;
+  background-color: green;
+}
+
+#sign-in > button {
+  width: 100px;
+}
+
+
 .signup-in-button-sweep {
   transition-delay: 2.23s;
   transform: translateX(-420px);
 }
 
-#sign-in-modal-button {
+#sign-in-button {
   margin: 0px -280px 0px 280px;
 }
 
