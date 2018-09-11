@@ -15,11 +15,11 @@ const signUp = function () {
 const signIn = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
-
+  document.getElementById('sign-in').reset()
+  $('.sign-in-div').toggleClass('sign-in-slide-in')
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFail)
-  $('#sign-in-modal').modal('hide')
   return false
 }
 
@@ -51,12 +51,19 @@ const clearOnClose = function () {
   $('input').val('')
 }
 
+const showSignForms = function () {
+  console.log('clicked')
+  $('.sign-in-div').toggleClass('sign-in-slide-in')
+}
+
 const handlers = function () {
   $('#sign-up').on('submit', signUp)
+  $('.close').on('click', showSignForms)
   $('#sign-in').on('submit', signIn)
   $('#sign-out').on('click', signOut)
+  $('#sign-in-button').on('click', showSignForms)
   $('#change-password').on('submit', changePW)
-  $('#change-password-modal-button, #sign-in-modal-button, #sign-up-modal-button').on('click', hideRudeness)
+  $('#change-password-modal-button, #sign-in-button, #sign-up-button').on('click', hideRudeness)
   $('#change-password-modal, #sign-in-modal, #sign-up-modal').on('hidden.bs.modal', clearOnClose)
 }
 
