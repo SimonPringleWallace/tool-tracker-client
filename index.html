@@ -37,8 +37,15 @@
           </div>
        </div>
 
- <!-- Sign-In Form -->
+ <!-- Sign-In Form / Sign Up Form -->
+          <!-- sign-in form -->
+          <!-- this div provides the flex container for centering the signup-in card -->
                 <div class='sign-up-in-container'>
+
+                  <!-- this div provides the container for signup and sign in, making the flip effect possible  -->
+               <div class="card">
+                  <!-- this is the front -->
+
                   <div class="sign-in-div">
                      <form id="sign-in">
                        <div class="close">
@@ -51,36 +58,27 @@
                             <input type="password" name="credentials[password]" placeholder="Password">
                       <button type="submit"> Kick it!</button>
                     </form>
-                 <p> or sign up <a href="#">here</a></p>
                   </div>
-                </div>
-
-<!-- Signup Modal body -->
-
-          <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title sign-up-modal" > Create Account </h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-
-                </div>
-                <div class="modal-body">
-                  <form id="sign-up">
-                    <input type="text" name="credentials[email]" placeholder="Email">
-                    <input type="password" name="credentials[password]" placeholder="Password" autocomplete="off">
-                    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="close-btn" data-dismiss="modal">Close</button>
-                  <button type="submit"> Create Account!</button>
-                 </form>
-                </div>
+          <!-- sign-up form -->
+           <!-- this is the back -->
+                  <div class="sign-up-div">
+                     <form id="sign-up">
+                       <div class="close">
+                         <p> x </p>
+                       </div>
+                       <h3> Sign Up! </h3>
+                       <legend> username </legend>
+                            <input type="text" name="credentials[email]" placeholder="User Name">
+                       <legend>password</legend>
+                            <input type="password" name="credentials[password]" placeholder="Password">
+                       <legend>confirm password</legend>
+                            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+                      <button type="submit"> Kick it!</button>
+                    </form>
+                  </div>
               </div>
+              <p> or sign up <a id="sign-toggle" href="#">here</a></p>
             </div>
-          </div>
 
 <!-- Change Password Modal Button-->
 

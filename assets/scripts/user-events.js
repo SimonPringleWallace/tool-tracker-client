@@ -53,13 +53,18 @@ const clearOnClose = function () {
 
 const showSignForms = function () {
   console.log('clicked')
-  $('.sign-in-div').toggleClass('sign-in-slide-in')
+  $('.card').toggleClass('card-slide-in')
+}
+
+const flipSignCard = function () {
+  $(''.card-slide-in')
 }
 
 const handlers = function () {
   $('#sign-up').on('submit', signUp)
   $('.close').on('click', showSignForms)
   $('#sign-in').on('submit', signIn)
+  $('#sign-toggle').on('click', flipSignCard)
   $('#sign-out').on('click', signOut)
   $('#sign-in-button').on('click', showSignForms)
   $('#change-password').on('submit', changePW)
