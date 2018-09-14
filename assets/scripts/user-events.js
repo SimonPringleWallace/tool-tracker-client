@@ -57,7 +57,9 @@ const showSignForms = function () {
 }
 
 const flipSignCard = function () {
-  $(''.card-slide-in')
+  console.log('i flip!')
+  $('.card-slide-in').removeClass('card')
+  $('.card-slide-in').toggleClass('flip')
 }
 
 const handlers = function () {
