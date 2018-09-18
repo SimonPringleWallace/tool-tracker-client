@@ -1,0 +1,33 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  margin-left:-220px;
+  animation: menu-slide-out .35s;
+  span {
+    align-self: flex-end;
+    img {
+      margin-left: 5px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+  li {
+    margin: 20px 20px;
+  }
+}
+.side-bar-slide {
+  animation: menu-slide-in .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-slide-in {
+  0% {margin-left: -220px;}
+  100% {margin-left: 0px;}
+}
+
+@keyframes menu-slide-out {
+  0% {margin-left: 0px;}
+  100% {margin-left: -220px;}
+}

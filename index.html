@@ -82,10 +82,20 @@
 
 <!-- Change Password Modal Button-->
 
-          <button type="button" id="change-password-modal-button" class="btn-primary" data-toggle="modal" data-target="#change-password-modal">
-            Change Password
-          </button>
 
+          <div class='side-bar'>
+            <span class='menu-hammer'>Menu<img src='public/hammer.ico'></span>
+            <ul>
+            <li><button type="button" id="change-password-modal-button" class="btn-primary" data-toggle="modal" data-target="#change-password-modal">
+                Change Password
+              </button>
+            </li>
+              <li><form id="get-tools">
+                <button type="submit"> get all the tools!</button>
+              </form>
+            </li>
+            </ul>
+          </div>
           <!--Change Password Modal body -->
           <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -111,10 +121,6 @@
           </div>
 
         <button id="sign-out"> Sign Out! </button>
-
-        <form id="get-tools">
-          <button type="submit"> get all the tools!</button>
-        </form>
 
         <form id="see-one-tool">
           <input type="name" name="id" placeholder="tool id">

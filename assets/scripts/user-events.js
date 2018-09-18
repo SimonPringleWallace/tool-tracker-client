@@ -16,7 +16,7 @@ const signIn = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
   document.getElementById('sign-in').reset()
-  $('.sign-in-div').toggleClass('sign-in-slide-in')
+  $('.card').toggleClass('card-slide-in')
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFail)
@@ -58,11 +58,14 @@ const showSignForms = function () {
 
 const flipSignCard = function () {
   console.log('i flip!')
-  $('.card-slide-in').removeClass('card')
   $('.card-slide-in').toggleClass('flip')
+}
+const showMenu = function () {
+  $('.side-bar').toggleClass('side-bar-slide')
 }
 
 const handlers = function () {
+  $('.side-bar').on('click', showMenu)
   $('#sign-up').on('submit', signUp)
   $('.close').on('click', showSignForms)
   $('#sign-in').on('submit', signIn)
