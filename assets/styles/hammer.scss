@@ -1,0 +1,36 @@
+.hammer-message-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.hammer {
+  height: 100px;
+  width: 100px;
+  transition: transform 1s ease-in;
+  transform-origin: right;
+}
+
+
+.hammerstrike {
+transition-delay: 1.25s;
+transform: translateY(-10px) rotate(-360deg);
+}
+
+.hammer-float {
+  transition: transform 1s ease-out;
+  transform-origin: center;
+  transform: translate(0px, -185px) rotate(-90deg);
+}
+
+.hammer-return {
+  transition: transform 1s ease-out;
+  transform-origin: center;
+  transform: translate(0px, 30px) rotate(0deg);
+}
+
+@keyframes vanish-r {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
